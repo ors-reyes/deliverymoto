@@ -1,0 +1,99 @@
+.tabsContainer
+    width: 100%
+    max-width: 500px
+    margin: auto
+    margin-top: -10px
+    z-index: 20;    
+
+.lbl-menu    
+    font-size: 1.5em
+    display: flex
+
+.lbl-menu label
+    display: inline-block
+    padding: 10px
+    width: 33%
+    cursor: pointer
+    transition: all 400ms ease
+    border-top: 0px solid transparent
+    border-right: 1px solid #bbbbbb
+    border-bottom: 1px solid #bbbbbb
+    border-left: 1px solid #bbbbbb    
+    background: linear-gradient(0deg, rgba(238,238,238,1) 0%, rgba(255,255,255,1) 100%)
+    border-radius: 0 0 10px 10px
+    box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.5), 5px 5px 3px rgba(0,0,0,.5)
+
+.lbl-menu label:hover
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 90%, rgba(255,255,0,1) 100%)
+    border-radius: 0 0 10px 10px
+
+.tabs
+    position: relative
+    margin-top: 10px
+
+.tabs div
+    position: absolute    
+    transition: all 600ms ease
+    opacity: 0
+    visibility: hidden
+    transform: scale(0.9)
+    padding: 30px
+    text-align: left
+    background: #eeeeee
+    box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.5), 5px 5px 3px rgba(0,0,0,.5)
+    padding-bottom: 40px
+    border-radius: 10px
+
+#radio1, #radio2, #radio3
+    display: none
+
+#radio1:checked ~ .tab1,
+#radio2:checked ~ .tab2,
+#radio3:checked ~ .tab3
+
+    opacity: 1
+    visibility: visible
+    transform: scale(1)
+
+.tabs div::after
+    position: absolute    
+    content: ''
+    border-left: 10px solid transparent
+    border-right: 10px solid transparent
+    border-top: 10px solid transparent
+    border-bottom: 10px solid #000000
+    bottom: 100%
+    left: 28px
+
+.tabs .tab1::after
+    left: 15%
+
+.tabs .tab2::after
+    left: 50%
+
+.tabs .tab3::after
+    left: 82%
+
+@media screen and ( min-width: 900px )
+    .tabsContainer
+        margin-top: 280px
+        margin-right: 50px
+    
+
+@media screen and ( min-width: 1200px )
+    .tabsContainer
+        margin-top: 280px
+        margin-right: 100px
+    
+
+@media screen and ( min-width: 1500px )
+    .tabsContainer
+        margin-top: 280px
+        margin-right: 300px
+    
+
+@media screen and ( min-width: 2000px )
+    .tabsContainer
+        margin-top: 280px
+        margin-right: 500px
+    

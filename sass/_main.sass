@@ -1,0 +1,67 @@
+.main
+    padding: 100px 0
+#iconosDescripcion
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+
+#express
+    background-image: url(../img/header/express.svg)
+
+#farmacia
+    background-image: url(../img/header/farmacia.svg)
+
+#documentos
+    background-image: url(../img/header/documentos.svg)
+
+#viveres
+    background-image: url(../img/header/viveres.svg)
+
+.contIcon
+    width: 300px
+    height: 200px
+    background: #eeeeee    
+    margin: auto
+
+.iconTxt
+    visibility: hidden
+    opacity: 0
+    width: 190px
+    height: 170px
+    background: #fff
+    padding: 10px
+    border-radius: 10px
+    box-shadow: inset 0px 0px 3px rgba(0,0,0,0.5)
+    border: 1px solid #fff
+    transition: visibility 1s, opacity 1s
+
+.iconTxtV
+    visibility: visible
+    opacity: 1
+
+.iconImg
+    cursor: pointer
+    background: #cccccc
+    width: 150px
+    height: 150px
+    transform: translate(90px, -170px)
+    z-index: 10
+    transition: all 1s
+    background-position: center
+    background-size: 90%
+    background-repeat: no-repeat
+    border-radius: 10px
+    box-shadow: inset 0px 0px 3px rgba(0,0,0,0.5)
+    border: 1px solid #fff
+
+.iconImgV
+    width: 80px
+    height: 170px
+    transform: translate(200px, -170px)
+    transition: all 1s
+
+@media screen and (min-width: 600px)
+    .main
+        padding: 150px 20px
+    .iconTxt
+        font-size: 1.1em

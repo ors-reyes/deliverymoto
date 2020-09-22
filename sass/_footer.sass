@@ -1,0 +1,56 @@
+.footer
+  width: 100%
+  background: #000
+  display: grid
+//   grid-template-columns: repeat(1, autofit)
+//   grid-template-rows: repeat(4, 1fr)
+  grid-template-rows: 150px 20px 100px 100px
+
+.upC
+    width: 80px
+    height: 80px
+    grid-row: 1/2
+    margin: auto
+    transform: translate(40px, 20px)    
+.redes
+    grid-row: 2/3
+.textFooter
+    grid-row: 3/4
+    padding: 20px
+    color: #ffffff
+.fooLogo
+    width: 200px
+    height: 200px
+    grid-row: 4/5
+    align-self: center
+    justify-self: center
+    background-image: url(../img/logoMotoSetFoo.svg)
+    background-size: contain
+
+@media screen and (min-width: 600px)
+    .footer
+        grid-template-columns: repeat(3, 1fr)
+        grid-template-rows: repeat(2, 1fr)
+    .upC        
+        grid-row: 1/2
+        grid-column: 2/3        
+        transform: translate(40px, 20px)
+    .textFooter
+        grid-row: 1/-1
+        grid-column: 1/2
+        padding: 20px
+        color: #ffffff
+        justify-self: center 
+        align-self: center
+    .redes
+        grid-row: 2/-1
+        grid-column: 2/3
+    .fooLogo
+        width: 200px
+        height: 200px
+        grid-row: 1/-1
+        grid-column: 3/-1
+        align-self: center
+        justify-self: center
+        background-image: url(../img/logoMotoSetFoo.svg)
+        background-size: contain
